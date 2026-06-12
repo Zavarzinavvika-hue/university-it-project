@@ -118,6 +118,7 @@
       .nav,.actions,.remove-btn,.file-input{display:none !important}
       .section{break-inside:avoid}
     }
+    #photoList, #addPhotoBtn, #visualList, #addVisualBtn { display: none !important; }
   </style>
 </head>
 <body>
@@ -218,9 +219,9 @@
       </div>
     </section>
 
-<section class="section">
+    <section class="section">
       <h2>4. Полевой аудит и реальные фотографии</h2>
-    <div class="media-grid">
+      <div class="media-grid">
         <div class="media-card">
           <img src="images/room-6242-general.jpg" alt="Общий вид" style="width:100%; border-radius:12px; display:block;">
           <p style="margin-top:12px;"><strong>Общий вид аудитории 6242:</strong> Аудитория укомплектована старыми партами. Наблюдается плотная посадка и устаревшая связка проектора с маркерной доской.</p>
@@ -236,32 +237,6 @@
         <div class="media-card">
           <img src="images/room-6242-wires.jpg" alt="Провода" style="width:100%; border-radius:12px; display:block;">
           <p style="margin-top:12px;"><strong>Отсутствие кабель-менеджмента:</strong> Провода питания лежат хаотично. Это нарушает базовые правила электробезопасности.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>7. AI-визуализации будущего пространства</h2>
-     <div class="media-grid">
-        <div class="media-card">
-          <img src="images/future-layout.png" alt="Обновленная аудитория" style="width:100%; border-radius:12px; display:block;">
-          <p style="margin-top:12px;"><strong>Обновленная аудитория 6242 с эргономичной мебелью.</strong></p>
-        </div>
-        <div class="media-card">
-          <img src="images/teacher-zone.png" alt="Зона преподавателя" style="width:100%; border-radius:12px; display:block;">
-          <p style="margin-top:12px;"><strong>Рабочее место преподавателя с интерактивной панелью.</strong></p>
-        </div>
-        <div class="media-card">
-          <img src="images/cable-management.png" alt="Провода" style="width:100%; border-radius:12px; display:block;">
-          <p style="margin-top:12px;"><strong>Безопасная организация проводки под учебными столами.</strong></p>
-        </div>
-        <div class="media-card">
-          <img src="images/lighting-ergonomics.png" alt="Освещение" style="width:100%; border-radius:12px; display:block;">
-          <p style="margin-top:12px;"><strong>Оптимальное распределение света для защиты от бликов.</strong></p>
-        </div>
-        <div class="media-card">
-          <img src="images/relax-corner.png" alt="Зона отдыха" style="width:100%; border-radius:12px; display:block;">
-          <p style="margin-top:12px;"><strong>Мини-зона отдыха и восстановления в углу аудитории.</strong></p>
         </div>
       </div>
     </section>
@@ -290,38 +265,50 @@
     </section>
 
     <section class="section">
-  <h2>6. Эргономика, зоны отдыха и серверные узлы</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Рабочие места</h3>
-      <textarea id="workspaces" placeholder="Стол, кресло, высота монитора...">Текущие парты слишком узкие для комфортной работы с ноутбуком и тетрадью одновременно. Отсутствует кабель-менеджмент: провода от зарядок висят на виду, создавая риск зацепиться. Решение: закрепить сетевые фильтры под столешницами, использовать стяжки для проводов. В идеале — замена стульев на более эргономичные для долгих пар.</textarea>
-    </div>
-    <div class="card">
-      <h3>Зоны отдыха и восстановления</h3>
-      <textarea id="restZones" placeholder="Где студент может сделать паузу...">В самой аудитории полноценная зона отдыха отсутствует, так как всё пространство занято учебными столами. Студенты отдыхают в коридоре во время перерывов. Для улучшения можно выделить один угол под кулер с водой и небольшой пуфик, если позволит свободная площадь у входа.</textarea>
-    </div>
-    <div class="card">
-      <h3>Сеть и серверный узел</h3>
-      <textarea id="network" placeholder="Сетевые розетки, Wi-Fi, коммутатор...">Доступ в сеть осуществляется через Wi-Fi или Ethernet (провода к ноутбукам). Проблема: хаотичная прокладка кабелей. Решение: убрать кабели в короба или закрепить стяжками. Необходимо убедиться в наличии ИБП для сетевого оборудования (роутер/свитч), чтобы сеть не падала при скачках напряжения.</textarea>
-    </div>
-    <div class="card">
-      <h3>Безопасность и доступность</h3>
-      <textarea id="safety" placeholder="Электробезопасность, проходы...">Проходы между рядами узкие, когда студенты сидят за столами. Напольное покрытие в норме, но свисающие кабели питания розеток нарушают технику безопасности. Необходимо зафиксировать все провода под столами, чтобы полностью исключить риск повреждения проводки.</textarea>
-    </div>
-  </div>
-</section>
+      <h2>6. Эргономика, зоны отдыха и серверные узлы</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Рабочие места</h3>
+          <textarea id="workspaces" placeholder="Стол, кресло, высота монитора...">Текущие парты слишком узкие для комфортной работы с ноутбуком и тетрадью одновременно. Отсутствует кабель-менеджмент: провода от зарядок висят на виду, создавая риск зацепиться. Решение: закрепить сетевые фильтры под столешницами, использовать стяжки для проводов. В идеале — замена стульев на более эргономичные для долгих пар.</textarea>
+        </div>
+        <div class="card">
+          <h3>Зоны отдыха и восстановления</h3>
+          <textarea id="restZones" placeholder="Где студент может сделать паузу...">В самой аудитории полноценная зона отдыха отсутствует, так как всё пространство занято учебными столами. Студенты отдыхают в коридоре во время перерывов. Для улучшения можно выделить один угол под кулер с водой и небольшой пуфик, если позволит свободная площадь у входа.</textarea>
+        </div>
+        <div class="card">
+          <h3>Сеть и серверный узел</h3>
+          <textarea id="network" placeholder="Сетевые розетки, Wi-Fi, коммутатор...">Доступ в сеть осуществляется через Wi-Fi или Ethernet (провода к ноутбукам). Проблема: хаотичная прокладка кабелей. Решение: убрать кабели в короба или закрепить стяжками. Необходимо убедиться в наличии ИБП для сетевого оборудования (роутер/свитч), чтобы сеть не падала при скачках напряжения.</textarea>
+        </div>
+        <div class="card">
+          <h3>Безопасность и доступность</h3>
+          <textarea id="safety" placeholder="Электробезопасность, проходы...">Проходы между рядами узкие, когда студенты сидят за столами. Напольное покрытие в норме, но свисающие кабели питания розеток нарушают технику безопасности. Необходимо зафиксировать все провода под столами, чтобы полностью исключить риск повреждения проводки.</textarea>
+        </div>
+      </div>
+    </section>
 
     <section class="section">
       <h2>7. AI-визуализации будущего пространства</h2>
-      <p class="lead">Добавьте не менее 5 визуализаций. Для каждой укажите промпт, назначение изображения и что именно оно помогает доказать. Можно использовать ИИ-генератор, графический редактор или собственную схему.</p>
-<img src="images/future-layout.png" style="width:100%; border-radius:12px; margin-bottom:10px;">
-<img src="images/teacher-zone.png" style="width:100%; border-radius:12px; margin-bottom:10px;">
-<img src="images/cable-management.png" style="width:100%; border-radius:12px; margin-bottom:10px;">
-<img src="images/lighting-ergonomics.png" style="width:100%; border-radius:12px; margin-bottom:10px;">
-<img src="images/relax-corner.png" style="width:100%; border-radius:12px; margin-bottom:10px;">
-      <div id="visualList" class="media-grid"></div>
-      <div class="actions">
-        <button class="btn action" id="addVisualBtn" type="button">+ Добавить визуализацию</button>
+      <div class="media-grid">
+        <div class="media-card">
+          <img src="images/future-layout.png" alt="Обновленная аудитория" style="width:100%; border-radius:12px; display:block;">
+          <p style="margin-top:12px;"><strong>Обновленная аудитория 6242 с эргономичной мебелью.</strong> Показывает, как правильное зонирование и скрытые провода освобождают пространство на столах.</p>
+        </div>
+        <div class="media-card">
+          <img src="images/teacher-zone.png" alt="Зона преподавателя" style="width:100%; border-radius:12px; display:block;">
+          <p style="margin-top:12px;"><strong>Рабочее место преподавателя с интерактивной панелью.</strong> Доказывает удобство демонстрации презентаций и кода для всей группы студентов.</p>
+        </div>
+        <div class="media-card">
+          <img src="images/cable-management.png" alt="Провода" style="width:100%; border-radius:12px; display:block;">
+          <p style="margin-top:12px;"><strong>Безопасная организация проводки под учебными столами.</strong> Иллюстрирует строгое соблюдение техники безопасности (отсутствие свисающих проводов под ногами).</p>
+        </div>
+        <div class="media-card">
+          <img src="images/lighting-ergonomics.png" alt="Освещение" style="width:100%; border-radius:12px; display:block;">
+          <p style="margin-top:12px;"><strong>Оптимальное распределение света для защиты от бликов.</strong> Показывает распределение света для снижения утомляемости глаз студентов на парах.</p>
+        </div>
+        <div class="media-card">
+          <img src="images/relax-corner.png" alt="Зона отдыха" style="width:100%; border-radius:12px; display:block;">
+          <p style="margin-top:12px;"><strong>Мини-зона отдыха и восстановления в углу аудитории.</strong> Показывает заботу о комфорте студентов во время перерывов.</p>
+        </div>
       </div>
     </section>
 
@@ -389,6 +376,13 @@
 
     <div class="footer">После заполнения перенесите материалы в собственные HTML-страницы, проверьте ссылки и опубликуйте проект через GitHub Pages.</div>
   </div>
+
+<div style="display:none;">
+  <div id="photoList"></div>
+  <button id="addPhotoBtn"></button>
+  <div id="visualList"></div>
+  <button id="addVisualBtn"></button>
+</div>
 
 <script>
 const storageKey = 'workspaceInfrastructureProjectDraft';
@@ -459,7 +453,8 @@ const checklistGroups = [
   }
 ];
 
-let state = {
+// Идеальное стартовое состояние (на случай сломанного черновика)
+let defaultState = {
   team:[
     {name:'Виктория Заварзина', duties:'Расчет стоимости владения (TCO), составление сметы в Excel и общая координация.', role:'Менеджер проекта', conclusion:'Анализ показал, что грамотное распределение бюджета между эргономикой и техникой дает наибольший эффект. Смета оптимизирована под реальные нужды.'},
     {name:'Михаил Лапин', duties:'Аудит электробезопасности, проходов и соответствия стандартам рабочих мест.', role:'Специалист по нормативам', conclusion:'Главная проблема текущего пространства — нарушение базовых норм безопасности и неудачный кабель-менеджмент, что требует срочного исправления.'},
@@ -475,44 +470,8 @@ let state = {
     {name:'Кабель-каналы и стяжки', specs:'Пластиковые лотки, липучки', qty:'1 компл.', price:'2 500 руб.', reason:'Убираем висящие провода зарядных устройств, чтобы студенты не спотыкались и не выдергивали их.', priority:'Обязательная'},
     {name:'Интерактивная панель 75"', specs:'4K, сенсорная, на мобильной стойке', qty:'1 шт.', price:'120 000 руб.', reason:'Замена связки "проектор + доска" на современное решение с более яркой картинкой, которая не слепнет при дневном свете.', priority:'Желательная'}
   ],
-  photos:[
-    {path:'images/room-6242-general.jpg', caption:'Общий вид аудитории 6242', finding:'Аудитория укомплектована старыми партами. Наблюдается плотная посадка и устаревшая связка проектора с маркерной доской.'},
-    {path:'images/room-6242-desks.jpg', caption:'Узкие учебные столы', finding:'Глубина столешниц недостаточна для комфортного размещения ноутбука и тетради одновременно. Стулья не имеют эргономичных регулировок.'},
-    {path:'images/room-6242-laptop.jpg', caption:'Текущая техника (ноутбуки Lenovo)', finding:'Парк техники устарел. Экраны бликуют при дневном свете, что создает лишнюю визуальную нагрузку во время занятий.'},
-    {path:'images/room-6242-wires.jpg', caption:'Отсутствие кабель-менеджмента', finding:'Провода питания лежат хаотично. Это нарушает базовые правила электробезопасности и повышает риск случайного отключения техники.'}
-  ],
-  visuals:[
-    {
-      path: 'images/future-layout.png', 
-      prompt: 'Modern university computer classroom, ergonomic wooden desks with integrated power outlets and hidden cable management, comfortable mesh chairs, bright uniform lighting, photorealistic, 4k', 
-      purpose: 'Демонстрация общего вида обновленной аудитории 6242 с эргономичной мебелью.', 
-      criteria: 'Показывает, как правильное зонирование и скрытые провода освобождают пространство на столах.'
-    },
-    {
-      path: 'images/teacher-zone.png', 
-      prompt: 'Professor front desk in a modern university classroom, 75-inch interactive touchscreen panel on the wall, clean white background, modern technology, highly detailed', 
-      purpose: 'Визуализация рабочего места преподавателя с интерактивной панелью вместо старого проектора.', 
-      criteria: 'Доказывает удобство демонстрации презентаций и кода для всей группы студентов.'
-    },
-    {
-      path: 'images/cable-management.png', 
-      prompt: 'Close-up of a modern office desk with neat cable management, wires hidden in a special tray under the table, no messy cables on the floor, clean and organized', 
-      purpose: 'Демонстрация безопасной организации проводки под учебными столами.', 
-      criteria: 'Иллюстрирует строгое соблюдение техники безопасности (отсутствие свисающих проводов под ногами).'
-    },
-    {
-      path: 'images/lighting-ergonomics.png', 
-      prompt: 'Modern classroom interior, focus on warm uniform LED ceiling lights, windows with blinds, comfortable visual environment for working with laptops, architectural photography', 
-      purpose: 'Оценка планируемого освещения и защиты от бликов на экранах ноутбуков.', 
-      criteria: 'Показывает оптимальное распределение света для снижения утомляемости глаз студентов на парах.'
-    },
-    {
-      path: 'images/relax-corner.png', 
-      prompt: 'Small cozy corner in a university classroom, modern water cooler, two small colorful soft poufs, minimalist style, relaxing atmosphere', 
-      purpose: 'Визуализация мини-зоны отдыха и восстановления в углу аудитории.', 
-      criteria: 'Показывает заботу о комфорте студентов во время коротких перерывов между занятиями.'
-    }
-  ],
+  photos:[],
+  visuals:[],
   checklist:{
     "check_0":true, "check_1":true, "check_2":true, "check_3":true,
     "check_4":true, "check_5":true, "check_6":true, "check_7":true,
@@ -524,6 +483,8 @@ let state = {
   }
 };
 
+let state = JSON.parse(JSON.stringify(defaultState));
+
 function byId(id){
   return document.getElementById(id);
 }
@@ -534,21 +495,17 @@ function escapeHtml(value){
   }[char]));
 }
 
-function updateDynamicLabels(){
-  document.querySelectorAll('[data-dynamic-number]').forEach((el, index) => {
-    el.textContent = el.dataset.dynamicNumber + ' ' + (index + 1);
-  });
-}
-
 function renderTeam(){
   const list = byId('teamList');
+  if(!list) return;
   list.innerHTML = '';
+  if(!state.team || !Array.isArray(state.team)) state.team = defaultState.team;
   state.team.forEach((member, index) => {
     const row = document.createElement('div');
     row.className = 'dynamic-row';
     row.innerHTML = `
       <div class="row-head">
-        <div class="row-title" data-dynamic-number="Участник">Участник ${index + 1}</div>
+        <div class="row-title">Участник ${index + 1}</div>
         <button class="btn danger remove-btn" type="button" data-remove-team="${index}">Удалить</button>
       </div>
       <div class="mini-grid">
@@ -560,12 +517,15 @@ function renderTeam(){
     `;
     list.appendChild(row);
   });
-  byId('addMemberBtn').disabled = state.team.length >= 6;
+  const btn = byId('addMemberBtn');
+  if(btn) btn.disabled = state.team.length >= 6;
 }
 
 function renderEquipment(){
   const list = byId('equipmentList');
+  if(!list) return;
   list.innerHTML = '';
+  if(!state.equipment || !Array.isArray(state.equipment)) state.equipment = defaultState.equipment;
   state.equipment.forEach((item, index) => {
     const row = document.createElement('div');
     row.className = 'dynamic-row';
@@ -595,57 +555,19 @@ function renderEquipment(){
 
 function renderPhotos(){
   const list = byId('photoList');
-  list.innerHTML = '';
-  state.photos.forEach((photo, index) => {
-    const card = document.createElement('div');
-    card.className = 'media-card';
-    card.innerHTML = `
-      <div class="row-head">
-        <h3>Фото текущего состояния ${index + 1}</h3>
-        <button class="btn danger remove-btn" type="button" data-remove-photo="${index}">Удалить</button>
-      </div>
-      <div class="media-preview" data-photo-preview="${index}">Предпросмотр фотографии</div>
-      <input class="file-input" type="file" accept="image/*" data-photo-file="${index}" />
-      <label class="caption" style="margin-top:10px;">Путь к файлу для публикации</label>
-      <input class="field" data-photo="${index}" data-field="path" type="text" value="${escapeHtml(photo.path)}" placeholder="images/auditory-before-1.jpg" />
-      <label class="caption" style="margin-top:10px;">Подпись</label>
-      <input class="field" data-photo="${index}" data-field="caption" type="text" value="${escapeHtml(photo.caption)}" placeholder="Что изображено на фото" />
-      <label class="caption" style="margin-top:10px;">Вывод по фото</label>
-      <textarea class="small" data-photo="${index}" data-field="finding" placeholder="Какая проблема или особенность подтверждается этим фото.">${escapeHtml(photo.finding)}</textarea>
-    `;
-    list.appendChild(card);
-  });
+  if(list) list.innerHTML = '';
 }
 
 function renderVisuals(){
   const list = byId('visualList');
-  list.innerHTML = '';
-  state.visuals.forEach((visual, index) => {
-    const card = document.createElement('div');
-    card.className = 'media-card';
-    card.innerHTML = `
-      <div class="row-head">
-        <h3>AI-визуализация ${index + 1}</h3>
-        <button class="btn danger remove-btn" type="button" data-remove-visual="${index}">Удалить</button>
-      </div>
-      <div class="media-preview" data-visual-preview="${index}">Предпросмотр визуализации</div>
-      <input class="file-input" type="file" accept="image/*" data-visual-file="${index}" />
-      <label class="caption" style="margin-top:10px;">Путь к файлу для публикации</label>
-      <input class="field" data-visual="${index}" data-field="path" type="text" value="${escapeHtml(visual.path)}" placeholder="images/future-zone-1.jpg" />
-      <label class="caption" style="margin-top:10px;">Промпт или метод создания</label>
-      <textarea class="small" data-visual="${index}" data-field="prompt" placeholder="Опишите промпт, модель или способ создания визуализации.">${escapeHtml(visual.prompt)}</textarea>
-      <label class="caption" style="margin-top:10px;">Назначение визуализации</label>
-      <input class="field" data-visual="${index}" data-field="purpose" type="text" value="${escapeHtml(visual.purpose)}" placeholder="Например: показать новую рассадку и свет" />
-      <label class="caption" style="margin-top:10px;">Что доказывает изображение</label>
-      <textarea class="small" data-visual="${index}" data-field="criteria" placeholder="Какая проектная идея становится понятнее благодаря изображению.">${escapeHtml(visual.criteria)}</textarea>
-    `;
-    list.appendChild(card);
-  });
+  if(list) list.innerHTML = '';
 }
 
 function renderChecklist(){
   const box = byId('qualityChecklist');
+  if(!box) return;
   box.innerHTML = '';
+  if(!state.checklist) state.checklist = defaultState.checklist;
   let absoluteIndex = 0;
   checklistGroups.forEach(group => {
     const card = document.createElement('div');
@@ -668,30 +590,33 @@ function updateChecklistSummary(){
   const total = all.length;
   const done = checked.length;
   const percent = total ? Math.round(done / total * 100) : 0;
-  byId('doneCount').textContent = done;
-  byId('totalCount').textContent = total;
-  byId('readyPercent').textContent = percent + '%';
-  byId('scoreFill').style.width = percent + '%';
+  
+  const elDone = byId('doneCount'); if(elDone) elDone.textContent = done;
+  const elTotal = byId('totalCount'); if(elTotal) elTotal.textContent = total;
+  const elPercent = byId('readyPercent'); if(elPercent) elPercent.textContent = percent + '%';
+  const elFill = byId('scoreFill'); if(elFill) elFill.style.width = percent + '%';
+  
   let status = 'Начните заполнение';
   if(percent >= 90) status = 'Готово к защите';
   else if(percent >= 70) status = 'Почти готово';
   else if(percent >= 45) status = 'Нужна доработка';
   else if(percent > 0) status = 'Соберите доказательства';
-  byId('readyStatus').textContent = status;
+  
+  const elStatus = byId('readyStatus'); if(elStatus) elStatus.textContent = status;
 }
 
 function captureState(){
+  if(!state.team) state.team = defaultState.team;
+  if(!state.equipment) state.equipment = defaultState.equipment;
+  if(!state.checklist) state.checklist = defaultState.checklist;
+
   document.querySelectorAll('[data-team]').forEach(el => {
-    state.team[Number(el.dataset.team)][el.dataset.field] = el.value;
+    const idx = Number(el.dataset.team);
+    if(state.team[idx]) state.team[idx][el.dataset.field] = el.value;
   });
   document.querySelectorAll('[data-equipment]').forEach(el => {
-    state.equipment[Number(el.dataset.equipment)][el.dataset.field] = el.value;
-  });
-  document.querySelectorAll('[data-photo]').forEach(el => {
-    state.photos[Number(el.dataset.photo)][el.dataset.field] = el.value;
-  });
-  document.querySelectorAll('[data-visual]').forEach(el => {
-    state.visuals[Number(el.dataset.visual)][el.dataset.field] = el.value;
+    const idx = Number(el.dataset.equipment);
+    if(state.equipment[idx]) state.equipment[idx][el.dataset.field] = el.value;
   });
   document.querySelectorAll('[data-check]').forEach(el => {
     state.checklist[el.dataset.check] = el.checked;
@@ -699,15 +624,23 @@ function captureState(){
 }
 
 function saveDraft(){
-  captureState();
-  const ids = [
-    'projectTitle','objectType','roomNumber','audience','uniqueness','projectGoal',
-    'noBudgetPlan','budgetPlan','tco','workplaceErgo','restZone','serverNode',
-    'safetyAccess','finalProjectConclusion','implementationPlan'
-  ];
-  const fields = {};
-  ids.forEach(id => fields[id] = byId(id).value);
-  localStorage.setItem(storageKey, JSON.stringify({...fields, dynamic:state}));
+  try {
+    captureState();
+    // ИСПРАВЛЕННЫЕ ИДЕНТИФИКАТОРЫ
+    const ids = [
+      'projectTitle','objectType','roomNumber','audience','uniqueness','projectGoal',
+      'noBudgetPlan','budgetPlan','tco','workspaces','restZones','network','safety',
+      'finalProjectConclusion','implementationPlan'
+    ];
+    const fields = {};
+    ids.forEach(id => {
+      const el = byId(id);
+      if(el) fields[id] = el.value;
+    });
+    localStorage.setItem(storageKey, JSON.stringify({...fields, dynamic:state}));
+  } catch(e) {
+    console.error("Ошибка при сохранении черновика", e);
+  }
 }
 
 function loadDraft(){
@@ -721,45 +654,28 @@ function loadDraft(){
       if(el) el.value = value || '';
     });
     if(saved.dynamic){
-      state = {
-        ...state,
-        ...saved.dynamic,
-        photos: saved.dynamic.photos && saved.dynamic.photos.length ? saved.dynamic.photos : state.photos,
-        visuals: saved.dynamic.visuals && saved.dynamic.visuals.length >= 5 ? saved.dynamic.visuals : state.visuals
-      };
+      // Безопасное слияние данных
+      if(saved.dynamic.team && Array.isArray(saved.dynamic.team) && saved.dynamic.team.length > 0) state.team = saved.dynamic.team;
+      if(saved.dynamic.equipment && Array.isArray(saved.dynamic.equipment)) state.equipment = saved.dynamic.equipment;
+      if(saved.dynamic.checklist) state.checklist = saved.dynamic.checklist;
     }
-  } catch(e){}
-}
-
-function previewImage(input, previewSelector){
-  const file = input.files && input.files[0];
-  const preview = document.querySelector(previewSelector);
-  if(!file || !preview) return;
-  const reader = new FileReader();
-  reader.onload = () => {
-    preview.innerHTML = `<img src="${reader.result}" alt="Предпросмотр" />`;
-  };
-  reader.readAsDataURL(file);
-}
-
-document.addEventListener('input', event => {
-  if(event.target.matches('input, textarea, select')){
-    saveDraft();
+  } catch(e){
+    console.error("Ошибка при загрузке черновика", e);
+    // При сбое сбрасываем до стандарта
+    state = JSON.parse(JSON.stringify(defaultState));
   }
+}
+
+// Привязка событий
+document.addEventListener('input', event => {
+  if(event.target.matches('input, textarea, select')) saveDraft();
 });
 
 document.addEventListener('change', event => {
-  const target = event.target;
-  if(target.matches('[data-check]')){
+  if(event.target.matches('[data-check]')){
     captureState();
     updateChecklistSummary();
     saveDraft();
-  }
-  if(target.matches('[data-photo-file]')){
-    previewImage(target, `[data-photo-preview="${target.dataset.photoFile}"]`);
-  }
-  if(target.matches('[data-visual-file]')){
-    previewImage(target, `[data-visual-preview="${target.dataset.visualFile}"]`);
   }
 });
 
@@ -781,75 +697,57 @@ document.addEventListener('click', event => {
       saveDraft();
     }
   }
-  if(target.matches('[data-remove-photo]')){
-    if(state.photos.length > 1){
-      captureState();
-      state.photos.splice(Number(target.dataset.removePhoto), 1);
-      renderPhotos();
-      saveDraft();
-    }
-  }
-  if(target.matches('[data-remove-visual]')){
-    if(state.visuals.length > 5){
-      captureState();
-      state.visuals.splice(Number(target.dataset.removeVisual), 1);
-      renderVisuals();
-      saveDraft();
-    } else {
-      alert('В задании должно остаться не менее 5 визуализаций.');
-    }
-  }
 });
 
-byId('addMemberBtn').addEventListener('click', () => {
-  captureState();
-  if(state.team.length < 6){
-    state.team.push({name:'', duties:'', role:'', conclusion:''});
-    renderTeam();
+const btnTeam = byId('addMemberBtn');
+if(btnTeam) {
+  btnTeam.addEventListener('click', () => {
+    captureState();
+    if(state.team.length < 6){
+      state.team.push({name:'', duties:'', role:'', conclusion:''});
+      renderTeam();
+      saveDraft();
+    }
+  });
+}
+
+const btnEq = byId('addEquipmentBtn');
+if(btnEq) {
+  btnEq.addEventListener('click', () => {
+    captureState();
+    state.equipment.push({name:'', specs:'', qty:'', price:'', reason:'', priority:'Рекомендуемая'});
+    renderEquipment();
     saveDraft();
-  } else {
-    alert('Команда может включать не более 6 человек.');
-  }
-});
+  });
+}
 
-byId('addEquipmentBtn').addEventListener('click', () => {
-  captureState();
-  state.equipment.push({name:'', specs:'', qty:'', price:'', reason:'', priority:'Рекомендуемая'});
-  renderEquipment();
-  saveDraft();
-});
+const btnSave = byId('saveBtn');
+if(btnSave) {
+  btnSave.addEventListener('click', () => {
+    saveDraft();
+    alert('Черновик успешно сохранён!');
+  });
+}
 
-byId('addPhotoBtn').addEventListener('click', () => {
-  captureState();
-  state.photos.push({path:'', caption:'', finding:''});
-  renderPhotos();
-  saveDraft();
-});
+const btnPrint = byId('printBtn');
+if(btnPrint) {
+  btnPrint.addEventListener('click', () => {
+    saveDraft();
+    window.print();
+  });
+}
 
-byId('addVisualBtn').addEventListener('click', () => {
-  captureState();
-  state.visuals.push({path:'', prompt:'', purpose:'', criteria:''});
-  renderVisuals();
-  saveDraft();
-});
+const btnClear = byId('clearBtn');
+if(btnClear) {
+  btnClear.addEventListener('click', () => {
+    if(confirm('Очистить сохранённый черновик этой страницы? Все участники и оборудование сбросятся до изначальных.')){
+      localStorage.removeItem(storageKey);
+      location.reload();
+    }
+  });
+}
 
-byId('saveBtn').addEventListener('click', () => {
-  saveDraft();
-  alert('Черновик сохранён в браузере.');
-});
-
-byId('printBtn').addEventListener('click', () => {
-  saveDraft();
-  window.print();
-});
-
-byId('clearBtn').addEventListener('click', () => {
-  if(confirm('Очистить сохранённый черновик этой страницы?')){
-    localStorage.removeItem(storageKey);
-    location.reload();
-  }
-});
-
+// Запуск инициализации
 loadDraft();
 renderTeam();
 renderEquipment();
